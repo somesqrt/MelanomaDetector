@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/MelanomaDetector.iml" filepath="$PROJECT_DIR$/.idea/MelanomaDetector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MelanomaDetectorBackend/MelanomaDetectorBackend.iml" filepath="$PROJECT_DIR$/MelanomaDetectorBackend/MelanomaDetectorBackend.iml" />
     </modules>
   </component>
 </project>
