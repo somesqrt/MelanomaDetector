@@ -1,0 +1,26 @@
+.uploadButton{
+  width: 28%;
+  height: 180px;
+}
+
+.uploadArea{
+  margin-top: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.dropArea{
+  width: 450px;
+  border: 4px dotted black;
+}
+
+
+.file{
+
+  opacity: 0;
+  padding: 5rem;
+  width: auto;
+  height: 5rem;
+}

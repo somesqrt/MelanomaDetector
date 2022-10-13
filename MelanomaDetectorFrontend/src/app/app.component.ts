@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MelanomaDetectorFrontend';
+  file:any
+  reader = new FileReader();
+
+  getFile(event: any){
+    this.file = event.target.files[0];
+
+    this.reader.readAsDataURL(event.target.files[0]);
+    this.reader.onload = (_event) => {
+      this.file = this.reader.result;
+    }
+
+    console.log('file', this.file);
+  }
+
+  uploadFile(){
+
+  }
 }
