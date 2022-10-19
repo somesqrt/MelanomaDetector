@@ -11,4 +11,8 @@ def clasify():
     if 'file' not in request.files:
         raise InvalidUsage('no_file', status_code=400)
     respone = random.choice(['benign', 'malign'])
-    return {'result': respone}
+    percentage = random.uniform(0.00, 98.50)
+    return {
+        'result': respone,
+        'percentage': percentage
+    }
