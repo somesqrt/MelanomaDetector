@@ -21,6 +21,8 @@ export class AppComponent {
     console.log('file', this.file);
   }
 
+
+
   uploadFile(){
 
   }
