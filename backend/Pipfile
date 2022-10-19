@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "2.2.2"
+flask-cors = "3.0.10"
+flasgger = "0.9.5"
+flask-httpauth = "4.7.0"
+gunicorn = "20.1.0"
+psycopg2-binary = "2.9.4"
+python-dotenv = "0.21.0"
+ipykernel = "6.16.0"
+isic-cli = "4.2.0"
+kaggle = "1.5.12"
+numpy = "1.23.4"
+pandas = "1.5.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

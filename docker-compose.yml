@@ -1,0 +1,18 @@
+version: "3"
+services:
+    backend:
+      build: ./backend
+      hostname: backend
+      environment:
+        FLASK_DEBUG: ${FLASK_DEBUG}
+        TESTING: ${TESTING}
+        CSRF_ENABLED: ${CSRF_ENABLED}
+        SWAGGER_USERNAME: ${SWAGGER_USERNAME}
+        SWAGGER_PASSWORD: ${SWAGGER_PASSWORD}
+        SECRET_KEY: ${SECRET_KEY}
+      expose:
+        - 8000
+      ports:
+        - "8000:8000"
+      volumes:
+        - ./backend/app:/app
