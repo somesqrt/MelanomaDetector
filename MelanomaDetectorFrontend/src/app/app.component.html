@@ -1,25 +1,119 @@
-<h1>Melanoma Detector</h1>
-
-<div class="uploadArea" *ngIf="!file">
-  <button class="uploadButton">
-    <label>
-      Click here
-      <input type="file" (change)="getFile($event)" class="file " />
-    </label>
-  </button>
-
-  <div class="dropArea" >
-    <label>
-      Drop here
-    <input type="file" (change)="getFile($event)" class="file " />
-    </label>
+<body>
+<div class="simple-linear">
+  <div class="nav-bar">
+    <a href="#" class="nav-link">About us</a>
+    <a href="#" class="nav-link">About melanoma</a>
+    <a href="#" class="nav-link">Contact Us</a>
+  </div>
+  <div class="content">
+    <div class="box">
+      <div class="left">
+        <h1 class="first-title">Keep yourself safe</h1>
+        <p class="subtitle"> Early detection is vital as, if caught early, 90% of melanomas can be cured with surgery. </p>
+        <div class="buttons">
+          <button class="CheckIt desktop-version" type="file" (click)="hiddenfileinput.click()"  clickable> Check it </button>
+          <input style="display: none" type="file" (change)="getFile($event)" #hiddenfileinput>
+          <button class="CheckIt mobile-version" type="file" (click)="hiddenfileinput.click()"  clickable> Take foto </button>
+          <input style="display: none" type="file" (change)="getFile($event)" #hiddenfileinput>
+          <button class="CheckIt2 mobile-version" type="file" (click)="hiddenfileinput.click()"  clickable> Upload foto </button>
+          <input style="display: none" type="file" (change)="getFile($event)" #hiddenfileinput>
+          <button class="Map desktop-version"> Clinics map </button>
+        </div>
+      </div>
+      <div class="third-button mobile-version">
+        <button class="Map mobile-version"> Clinics map </button>
+      </div>
+      <div class="right ">
+        <img src="assets/img/main-pic(png).png" class="img">
+      </div>
+    </div>
   </div>
 </div>
+  <div class="benefits">
+    <h2>3 IMPORTANT THINGS</h2>
+    <div class="benefits-blocks">
+      <div class="block">
+        <img src="assets/icons/pngwing%201.png " class="icon">
+        <h4 class="benefits-name">Valuable business insights</h4>
+        <p class="benefits-description">If the application detects a sign of melanoma, consult a doctor</p>
+      </div>
+      <div class="block">
+        <img src="assets/icons/newsletter-dev.png" class="icon">
+        <h4 class="benefits-name">Powerful Algorithms</h4>
+        <p class="benefits-description">Get reliable results with powerful algorithms, rules and quality methods.</p>
+      </div>
+      <div class="block">
+        <img src="assets/icons/timeline.png" class="icon">
+        <h4 class="benefits-name">Data in real-time</h4>
+        <p class="benefits-description">Real-time data collection and processing, fast results</p>
+      </div>
+    </div>
+  </div>
 
-<div class="uploadArea" *ngIf="file">
-  <img [src]="file"  width="700" height="700">
-  <button (click)="file=undefined">Clear image</button>
-  <button (click)="uploadFile()">Check it</button>
-</div>
+  <div class="technology">
+    <div class="box2">
+      <div class="left-technology desktop-version">
+        <img src="../assets/img/neural-network-img.png" class="img-techology">
+      </div>
+      <div class="right-technology">
+        <img src="../assets/icons/Tag.png" class="icon-technology">
+        <h3 class="title-technology">Validation with a Neural Network</h3>
+        <p class="subtitle-technology">The check takes place on a well-trained neural network, after which you get an answer within a few minutes.</p>
+      </div>
+    </div>
+  </div>
 
+  <div class="experts-backgroud">
+    <div class="experts">
+      <p class="experts-title">Our tool was developed with the recommendations of doctors in the field of cancer</p>
+      <div class="people">
+        <div class="person">
+          <img src="assets/icons/Profile.svg"class="person-foto">
+          <h2 class="person-name">Name Surname <br> Speciality</h2>
+        </div>
+        <div class="person">
+          <img src="assets/icons/Profile.svg"class="person-foto">
+          <h2 class="person-name">Name Surname <br> Speciality</h2>
+        </div>
+        <div class="person">
+          <img src="assets/icons/Profile.svg" class="person-foto">
+          <h2 class="person-name">Name Surname <br> Speciality</h2>
+        </div>
+      </div>
+      <hr class="line">
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="columns">
+      <div class="column">
+        <h2 class="footer-title desktop-version">For Developers</h2>
+        <ul class="widget-list desktop-version">
+          <li><a href="">Docs</a></li>
+          <li><a href="">API</a></li>
+          <li><a href="">Open Source</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2 class="footer-title">Company</h2>
+        <ul class="widget-list">
+          <li><a href="">Blog</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2 class="footer-title">Support</h2>
+        <ul class="widget-list">
+          <li><a href="">Help Center</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Documentation</a></li>
+          <li><a href="">Partner</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <h1 class="footer-last-title">Melanoma detection Team  </h1>
+    <img src="assets/icons/image%207.svg" class="footer-last-icon">
+  </div>
+
+</body>
 

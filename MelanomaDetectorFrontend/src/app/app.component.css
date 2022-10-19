@@ -1,6 +1,140 @@
-.uploadButton{
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/metropolis.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 100%;
+  height: 2316px;
+}
+
+
+.nav-bar{
+  width: 100%;
+  padding-top: 2%;
+  text-align: center;
+}
+
+.nav-link{
+  text-decoration: none;
+  padding: 27px;
+  font-size: 20pt;
+  color: black;
+  font-family: "Metropolis Medium";
+
+}
+
+.simple-linear {
+
+  background-image: url("src/assets/img/firstLine.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 55%;
+  width: 100%;
+
+}
+
+.nav-link:hover{
+  color: #4273f5;
+}
+
+.content{
+  height: 100%;
+  padding-top: 2%;
+  align-content: center;
+  overflow:hidden;
+}
+
+.box{
+  white-space:nowrap;
+  height: 100%;
+}
+
+.left{
+  height: 100%;
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.right{
+
+  height: 100%;
+  width: 50%;
+  display: inline-block;
+}
+
+.first-title{
+  padding-top: 26%;
+  padding-left: 25%;
+  font-family: Metropolis;
+  font-weight: bold;
+  font-size: 57pt;
+}
+
+.subtitle{
+  padding-left: 25%;
+  padding-right: 10%;
+  font-family: Metropolis;
+  font-size: 20pt;
+  white-space: normal;
+}
+
+.buttons{
+  padding-top: 5%;
+  padding-left: 25%;
+}
+
+.CheckIt{
+  width: 25%;
+  padding: 30px;
+  font-size: 20px;
+  background-color: #722ED1;
+  border: 0;
+  color: white;
+  border-radius: 50px;
+  font-family: Metropolis;
+}
+
+.CheckIt:hover{
+  box-shadow: 0 15px 20px rgb(0 0 0 / 20%);
+  transform: translateY(-3px);
+  transform: scaleX(1.1) scaleY(1.1);
+}
+
+.Map{
   width: 28%;
-  height: 180px;
+  padding: 30px;
+  font-size: 20px;
+  background-color: white;
+  border: 0;
+  color: #722ED1;
+  border-radius: 50px;
+  font-family: Metropolis;
+  margin-left: 25%;
+}
+
+.Map:hover{
+  box-shadow: 0 15px 20px rgb(0 0 0 / 20%);
+  transform: translateY(-3px);
+  transform: scaleX(1.1) scaleY(1.1);
+}
+
+.img{
+  height: 70%;
+  width: 70%;
+}
+
+.uploadButtonText{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  alignment: center;
 }
 
 .uploadArea{
@@ -18,9 +152,422 @@
 
 
 .file{
-
+  display: none;
   opacity: 0;
   padding: 5rem;
   width: auto;
   height: 5rem;
+}
+
+.mobile-version{
+  display: none;
+}
+
+.benefits{
+  width: 100%;
+  height: 18%;
+  padding-top: 2%;
+  align-content: center;
+  text-align: center;
+}
+
+h2{
+  align-self: center;
+  font-family: Metropolis;
+  font-weight: bold;
+  font-size: 30pt;
+}
+
+.benefits-blocks{
+  margin-top: 3%;
+  margin-left: 20%;
+  width: 60%;
+}
+
+.block{
+  width: 25%;
+  margin-left: 2%;
+  display: inline-block;
+  white-space: normal;
+}
+
+.icon{
+  height: 18%;
+  width: 18%;
+}
+
+.benefits-name{
+  margin-top: 2%;
+  font-family: Metropolis;
+  font-size: 18pt;
+}
+
+.benefits-description{
+  margin-top: 4%;
+  font-family: Metropolis;
+  white-space: normal;
+  font-size: 15pt;
+}
+
+.technology{
+  width: 100%;
+  height: 25%;
+  padding-top: 2%;
+  align-content: center;
+  text-align: center;
+}
+
+.box2{
+  white-space:nowrap;
+  height: 100%;
+}
+
+.left-technology{
+  vertical-align: middle;
+  width: 50%;
+  display: inline-block;
+}
+
+.right-technology{
+  margin-top: 5%;
+  padding-left: 5%;
+  text-align: left;
+  vertical-align: top;
+  width: 45%;
+  display: inline-block;
+}
+
+.img-techology{
+  padding-left: 35%;
+  height: 72%;
+  width: 72%;
+}
+
+.icon-technology{
+  margin-top: 3%;
+  width: 23%;
+  height: 23%;
+}
+
+.title-technology{
+  margin-left: 1%;
+  margin-top: 2%;
+  font-family: Metropolis;
+  white-space: normal;
+  font-size: 40pt;
+}
+
+.subtitle-technology{;
+  font-family: Metropolis;
+  margin-top: 4%;
+  margin-left: 1%;
+  white-space: normal;
+  font-size: 17pt;
+  width: 60%
+}
+
+.experts-backgroud{
+  background-image: url("src/assets/img/secondLine.svg");
+  height: 44%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.experts{
+  align-content: center;
+  text-align: center;
+}
+
+.experts-title{
+  margin-left: 20%;
+  font-family: Metropolis;
+  padding-top: 13%;
+  font-size: 30pt;
+  width: 60%;
+}
+
+.people{
+  margin-top: 5%;
+  margin-left: 10%;
+  width: 80%;
+  text-align: center;
+}
+
+.person{
+  display: inline-block;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.person-foto{
+  width: 60%;
+  height: 60%;
+}
+
+.person-name{
+  margin-top: 8%;
+  font-size: 20pt;
+  font-family: Metropolis;
+}
+
+.line{
+  margin-left: 15%;
+  margin-top: 3%;
+  border-width: 2px;
+  width: 70%;
+}
+
+.footer{
+  height: 10%;
+  text-align: center;
+}
+
+.columns{
+  margin-top: 1%;
+  margin-left: 20%;
+  width: 60%;
+  text-align: center;
+
+}
+
+.column{
+  vertical-align: top;
+  display: inline-block;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.footer-title{
+  font-size: 20pt;
+  font-family: Metropolis;
+}
+
+.widget-list {
+  padding: 0;
+  list-style: none;
+  font-family: Metropolis;
+}
+.widget-list a:before {
+  margin-right: 14px;
+  font-family: Metropolis;
+}
+.widget-list a {
+  text-decoration: none;
+  font-family: Metropolis;
+  outline: none;
+  display: block;
+  padding: 6px 0;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: #444;
+
+}
+.widget-list a:hover {color: #b99d61;}
+
+.footer-last-title{
+  margin-top: 3%;
+  height: 10px;
+  display: inline-block;
+  font-family: Metropolis;
+  font-size: 15pt;
+}
+.footer-last-icon{
+  padding-top: 2.85%;
+  position: absolute;
+  margin-left: 0.5%;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 1000px){
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .dropArea{
+    display: none;
+  }
+  .desktop-version{
+    display: none;
+  }
+  .mobile-version{
+    display: inline-block;
+  }
+
+  .nav-link{
+    padding: 20px;
+    font-size: 12pt;
+  }
+
+  .nav-bar{
+    padding-top: 10%;
+  }
+
+  .content{
+    height: 100%;
+  }
+
+  .first-title{
+    padding-left: 5%;
+    font-size: 24pt;
+  }
+  .subtitle{
+    width: 70%;
+    padding-top: 10%;
+    padding-left: 5%;
+    font-size: 12pt;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .box{
+    height: 100%;
+    position: relative;
+    float: left;
+    white-space: normal;
+  }
+  .left{
+    width: 100%;
+    height: 40%;
+  }
+
+  .third-button{
+    text-align: center;
+    padding-top: 5%;
+    height: 6%;
+    width: 100%;
+  }
+
+  .right{
+    width: 100%;
+    height: 30%;
+  }
+  .img{
+    height: 100%;
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  .buttons{
+    text-align: left;
+    padding: 0;
+  }
+
+  .CheckIt{
+    margin-left: 10%;
+    margin-top: 10%;
+    padding: 10px;
+    width: 32%;
+    padding: 15px;
+    font-size: 15px;
+    font-family: Metropolis;
+  }
+
+  .CheckIt2{
+    width: 32%;
+    margin-left: 10%;
+    padding: 15px;
+    font-size: 15px;
+    background-color: #722ED1;
+    border: 0;
+    color: white;
+    border-radius: 50px;
+    font-family: Metropolis;
+  }
+
+  .Map{
+    padding: 10px;
+    width: 35%;
+    padding: 15px;
+    font-size: 15px;
+    margin-left: 0;
+  }
+
+  .simple-linear {
+    background-image: url("src/assets/img/firstLine-mobile.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 35%;
+    width: 100%;
+  }
+
+  .benefits{
+  width: 100%;
+  height: 26%;
+  padding-top: 10%;
+  align-content: center;
+  text-align: center;
+  }
+
+  h2{
+    font-size: 20pt;
+  }
+
+  .benefits-blocks{
+    margin-top: 3%;
+    margin-left: 20%;
+    width: 60%;
+  }
+
+  .block{
+    width: 100%;
+    padding-top: 7%;
+    margin-left: 2%;
+    display: inline-block;
+    white-space: normal;
+  }
+
+  .technology{
+    height: 16%;
+  }
+
+  .right-technology{
+    margin-top: 30%;
+    padding-left: 5%;
+    width: 100%;
+  }
+
+  .icon-technology{
+    margin-top: 1%;
+    width: 50%;
+    height: 50%;
+  }
+
+  .title-technology{
+    margin-left: 0;
+    font-size: 16pt;
+  }
+
+  .subtitle-technology{
+    margin-left: 0;
+    font-size: 11pt;
+    width: 70%
+  }
+
+  .experts-backgroud{
+    background-image: url("src/assets/img/secondLine-mobile.svg");
+    height: 55%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .experts-title{
+    padding-top: 30%;
+    font-size: 20pt;
+  }
+
+  .columns{
+    margin-left: 0;
+    width: 100%;
+  }
+
+
+  .column{
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 5%;
+  }
+
 }
