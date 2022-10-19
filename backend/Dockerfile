@@ -1,0 +1,22 @@
+FROM python:3.10-buster
+
+RUN apt-get update && apt-get -qq -y install build-essential
+
+# Add Tini
+ENV TINI_VERSION v0.19.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
+RUN chmod +x /tini
+
+# Setup flask application
+WORKDIR /deploy
+
+ADD requirements.txt ./
+RUN pip install -r requirements.txt
+
+ADD . .
+
+# default Tini startup
+ENTRYPOINT ["/tini", "--"]
+
+# Run your program under Tini
+CMD ["sh", "docker-entrypoint.sh"]

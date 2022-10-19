@@ -1,0 +1,42 @@
+Get list of all activities
+
+---
+tags:
+  - Clasify
+ 
+         
+security:
+  - bearerAuth: []
+
+
+responses:
+  200:
+    description: List of all activities
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/V1_Activity1'
+
+  401:
+    description: Unauthorized Access
+    content:
+      application/json:
+        example: "Unauthorized Access"
+          
+              
+
+  500:
+    description: Error if something has failed during processing of the request. This event will be logged.
+    content:
+      application/json:
+        example:
+          message: "error"
+          error: true
+
+definitions:
+  V1_Activity1:
+    type: object  
+    properties:
+      safe:
+        type: string
+        example: safe
