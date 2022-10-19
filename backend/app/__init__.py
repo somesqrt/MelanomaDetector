@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_cors import CORS
 from .config import Config
 from .swagger import init_swagger
@@ -26,6 +26,26 @@ class Decorators(object):
             return f(*args, **kwargs)
         return wrapped
 
+class InvalidUsage(Exception):
+    status_code = 400
+
+    def __init__(self, message, status_code=None):
+        Exception.__init__(self)
+        self.error_info = message
+        if status_code is not None:
+            self.status_code = status_code
+
+    def to_dict(self):
+        return {
+            'message': self.error_info,
+            'error': True
+        }
+
+@app.errorhandler(InvalidUsage)
+def handle_invalid_usage(error):
+    response = jsonify(error.to_dict())
+    response.status_code = error.status_code
+    return response
 
 decorators = Decorators()
 
