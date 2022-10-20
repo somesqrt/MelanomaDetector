@@ -10,3 +10,6 @@ isic-cli==4.2.0
 kaggle==1.5.12
 numpy==1.23.4
 pandas==1.5.1
+opencv-python==4.6.0.66
+matplotlib==3.6.1
+tensorflow==2.10.0
