@@ -1,23 +1,33 @@
-<body>
+<div class="body" *ngIf="!ScanPageVisible">
+<div id="HomePage" class="homePage" *ngIf="!ScanPageVisible">
 <div class="simple-linear">
+
   <div class="nav-bar">
-    <a href="#" class="nav-link">About us</a>
-    <a href="#" class="nav-link">About melanoma</a>
-    <a href="#" class="nav-link">Contact Us</a>
+    <a href="#" class="nav-link" (click)="showAbout1(); " >About us</a>
+    <div class="AboutUs" *ngIf="about1IsVisible" [@slideOutTopLinks]><p class="aboutUsText" >We are six students of Pavel Josef Šafárik University in Kosice. Here is a site made by us as part of one of the projects of the LiveProjekts event. On this project, we used technologies such as Angular, PythonFlask, Flutter, python to write a neural network.</p></div>
+    <a href="#articles" class="nav-link" (click)="scrollToElement(articles)" >About melanoma</a>
+    <div class="AboutMelanoma" *ngIf="about2IsVisible" [@slideOutTopLinks] >
+      <app-article class="appArticle">
+      </app-article>
+    </div>
+    <a href="#contactUs" class="nav-link" (click)="scrollToElement(contactUs)" >Contact Us</a>
+    <div class="notificate" *ngIf="notificate" [@notification]> Mail copied </div>
   </div>
-  <div class="content">
-    <div class="box">
+  <div class="content" >
+
+    <div class="MainBoxMapPage" *ngIf="mapVisible" [@slideInRight]>
+      <app-map>
+      </app-map>
+      <button class="cancelMapButton desktop-version" (click)="changeMapVisible()"> Get back</button>
+    </div>
+
+    <div class="MainBoxMainPage" *ngIf="!mapVisible" [@slideInRight]>
       <div class="left">
         <h1 class="first-title">Keep yourself safe</h1>
         <p class="subtitle"> Early detection is vital as, if caught early, 90% of melanomas can be cured with surgery. </p>
         <div class="buttons">
-          <button class="CheckIt desktop-version" type="file" (click)="hiddenfileinput.click()"  clickable> Check it </button>
-          <input style="display: none" type="file" (change)="getFile($event)" #hiddenfileinput>
-          <button class="CheckIt mobile-version" type="file" (click)="hiddenfileinput.click()"  clickable> Take foto </button>
-          <input style="display: none" type="file" (change)="getFile($event)" #hiddenfileinput>
-          <button class="CheckIt2 mobile-version" type="file" (click)="hiddenfileinput.click()"  clickable> Upload foto </button>
-          <input style="display: none" type="file" (change)="getFile($event)" #hiddenfileinput>
-          <button class="Map desktop-version"> Clinics map </button>
+          <button class="CheckIt desktop-version" type="file" (click)="goToScanPage()"  clickable> Go check it </button>
+          <button class="Map desktop-version" (click)="changeMapVisible()"> Clinics map </button>
         </div>
       </div>
       <div class="third-button mobile-version">
@@ -27,6 +37,10 @@
         <img src="assets/img/main-pic(png).png" class="img">
       </div>
     </div>
+
+
+
+
   </div>
 </div>
   <div class="benefits">
@@ -62,6 +76,11 @@
       </div>
     </div>
   </div>
+  <div #articles class="articles">
+    <app-article class="appArticle">
+
+    </app-article>
+  </div>
 
   <div class="experts-backgroud">
     <div class="experts">
@@ -82,6 +101,11 @@
       </div>
       <hr class="line">
     </div>
+  </div>
+
+  <div #contactUs class="contactUs">
+    <div class="contactUsText"><h1 class="UsText">Do you have any questions?</h1></div>
+    <div class="contactUsButton"> <a class="ContactUsMail" href="mailto:contactUs@gmail.com"> Contact us </a> </div>
   </div>
 
   <div class="footer">
@@ -114,6 +138,17 @@
     <h1 class="footer-last-title">Melanoma detection Team  </h1>
     <img src="assets/icons/image%207.svg" class="footer-last-icon">
   </div>
+</div>
+</div>
 
-</body>
+<div class="body2" *ngIf="ScanPageVisible">
+  <div class="pageForScan" *ngIf="ScanPageVisible">
+    <div class="uploadPage" *ngIf="!mapVisible">
+      <app-scan-page>
+
+      </app-scan-page>
+    </div>
+  </div>
+</div>
+
 
