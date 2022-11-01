@@ -1,0 +1,9 @@
+<div class="map" id="map">
+  <map-marker
+    *ngFor="let marker of markers2"
+    [position]="marker.position">
+    <map-info-window #infoWindow>
+      {{ marker.label }}
+    </map-info-window>
+  </map-marker>
+</div>

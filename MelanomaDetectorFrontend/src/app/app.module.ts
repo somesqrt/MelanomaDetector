@@ -7,7 +7,7 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import { ArticleComponent } from './article/article.component';
 import { MapComponent } from './map/map.component';
 import { ScanPageComponent } from './scan-page/scan-page.component';
-
+import { GoogleMapsModule } from '@angular/google-maps'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +19,8 @@ import { ScanPageComponent } from './scan-page/scan-page.component';
         BrowserModule,
         HttpClientModule,
         BrowserAnimationsModule,
-        MatExpansionModule
+        MatExpansionModule,
+        GoogleMapsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

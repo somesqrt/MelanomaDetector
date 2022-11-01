@@ -28,7 +28,7 @@ export class AppComponent{
   about1IsVisible: boolean = false
   about2IsVisible: boolean = false
 
-  mapVisible: boolean = false;
+  mapVisible: boolean = true;
   ScanPageVisible: boolean = false;
 
   constructor( private clipboard: Clipboard){}
