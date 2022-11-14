@@ -7,21 +7,31 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import { ArticleComponent } from './article/article.component';
 import { MapComponent } from './map/map.component';
 import { ScanPageComponent } from './scan-page/scan-page.component';
-import { GoogleMapsModule } from '@angular/google-maps'
+import { GoogleMapsModule } from '@angular/google-maps';
+import { AppRoutingModule } from './app-routing.module';
+import { ArticlesComponent } from './articles/articles.component';
+import { RoutingComponent } from './routing/routing.component';
+import { HomepageComponent } from './homepage/homepage.component'
+import {MatCardModule} from "@angular/material/card";
 @NgModule({
   declarations: [
     AppComponent,
     ArticleComponent,
     MapComponent,
-    ScanPageComponent
+    ScanPageComponent,
+    ArticlesComponent,
+    RoutingComponent,
+    HomepageComponent
   ],
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        MatExpansionModule,
-        GoogleMapsModule
-    ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatExpansionModule,
+    GoogleMapsModule,
+    AppRoutingModule,
+    MatCardModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MatExpansionModule} from '@angular/material/expansion';
 import { ARTICLES } from '../interfaces/mockedArticles';
+import { AppComponent } from "../app.component";
+import { ArticlesComponent } from "../articles/articles.component";
+
 
 @Component({
   selector: 'app-article',
@@ -10,13 +12,17 @@ import { ARTICLES } from '../interfaces/mockedArticles';
 export class ArticleComponent implements OnInit{
 
   @Input() article = ARTICLES;
+  index!: number;
+
+  constructor( private appComponent: AppComponent, private articlesComponent: ArticlesComponent) {}
 
   ngOnInit(): void {
-
-    setInterval(() => {
-    }, 2000)
-
+    window.scrollTo(0,0)
+    this.index=this.articlesComponent.index
   }
 
+  changeVisible(){
+    this.articlesComponent.allArticleVisible = true;
+  }
 
 }

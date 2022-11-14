@@ -1,53 +1,52 @@
-@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/metropolis.min.css");
-
-.order{
-  font-size: 35pt;
-  color: black;
-  font-family: "Metropolis Medium";
-}
-
-.mainPoint{
-  font-size: 35pt;
-  color: black;
-  font-family: "Metropolis Medium";
-}
-
-.content{
-  text-align: left;
-  font-size: 25pt;
-  color: black;
-  font-family: "Metropolis Medium";
-}
-
-.wholeHtml{
+.whole{
+  margin-top: 2%;
   width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%,rgb(173, 209, 255) 100%,  rgb(130, 170, 224) 100%);
 }
 
-ng-template{
-  margin-bottom: 5%;
+.backButtonToAllArticles{
+  position: fixed;
+  text-align: center;
+  vertical-align: middle;
+  width: 4%;
+  height: 80%;
+  display: inline-block;
+  background-color: rgba(185, 177, 177, 0.17);
+  border-radius: 0 50px 50px 0;
 }
 
-.msg-header {
-  flex-grow: 0.1;
-  justify-content: center;
+.backText{
+  margin-top: 12vh;
+  margin-left: 5%;
+  font-size: 60pt;
+  font-family: "Metropolis Medium";
 }
 
-.msg-header-description {
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+h1{
+  writing-mode: vertical-rl;
+  letter-spacing: 15vh;
 }
 
-
-mat-expansion-panel{
-  margin-left: 2%;
-  width: 96%;
-  border-radius: 15px!important;
-  box-shadow: 2px 2px 10px #8c8c8c !important;
-  font-size: 120%;
-  background-color: white;
-  margin-top: 3%;
-  margin-bottom: 3%;
+.backButtonToAllArticles:hover{
+  background-color: rgba(89, 88, 88, 0.33);
+  transform: scaleX(1.1) scaleY(1.1);
 }
 
+.articleContent{
+  width: 90%;
+  margin-left: 7%;
+  margin-right: 3%;
+  display: inline-block;
+  white-space: normal;
+  font-size: 27pt;
+}
 
+.title{
+  font-family: "Metropolis Medium";
+  font-size: 40pt;
+  margin-bottom: 2%;
+}

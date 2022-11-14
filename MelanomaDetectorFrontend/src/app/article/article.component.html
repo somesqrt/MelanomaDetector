@@ -1,23 +1,13 @@
-<div class="wholeHtml">
-  <mat-expansion-panel *ngFor="let article of article">
-    <mat-expansion-panel-header>
-
-      <mat-panel-title class="msg-header">
-        <h1 class="order">{{article.order}}</h1>
-      </mat-panel-title>
-
-      <mat-panel-description class="msg-header-description">
-        <h3 class="mainPoint">{{article.mainPoint}}</h3>
-      </mat-panel-description>
-
-    </mat-expansion-panel-header>
-
-    <ng-template matExpansionPanelContent >
-      <div class="content">
-      {{article.content}}
-      </div>
-
-    </ng-template>
-
-  </mat-expansion-panel>
+<div class="whole">
+  <div class="backButtonToAllArticles" (click)="changeVisible()">
+    <h1 class="backText">BACK</h1>
+  </div>
+  <div class="articleContent">
+    <div class="title">
+      {{article[index].mainPoint}}
+    </div>
+    <div>
+      {{article[index].content}}
+    </div>
+  </div>
 </div>

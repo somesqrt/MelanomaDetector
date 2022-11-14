@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UploadService} from "../upload.service";
-import { AppComponent } from "../app.component";
+import { HomepageComponent } from "../homepage/homepage.component";
 import {
   slideInLeft,
   slideInRight,
@@ -24,14 +24,14 @@ export class ScanPageComponent{
   res: string='';
   huj:any = "huj";
 
-  constructor(private uploadService: UploadService, private appComponent: AppComponent) {}
+  constructor(private uploadService: UploadService, private homepageComponent: HomepageComponent) {}
 
   GoToHomePage(){
-    this.appComponent.goToScanPage()
+    this.homepageComponent.goToScanPage()
   }
 
   GoToMapFromResult(){
-    this.appComponent.changeMapVisible()
+    this.homepageComponent.changeMapVisible()
   }
 
   getFile(event: any){
