@@ -25,11 +25,13 @@ export const slideIn = trigger("slideIn", [
 export const slideInLeft = trigger("slideInLeft", [
   transition(":enter", [
     style({
+      position: "absolute",
       transform: "translateX(-100%)"
     }),
     animate(
       "500ms",
       style({
+        position: "absolute",
         transform: "translateX(0)",
 
       })
@@ -84,20 +86,19 @@ export const slideInLeft2 = trigger("slideInLeft2", [
 export const slideInRight = trigger("slideInRight", [
   transition(":enter", [
     style({
-      transform: "translateX(100%)"
+      transform: "translateX(100%)",
+
     }),
     animate(
       "500ms",
       style({
         transform: "translateX(0)",
-        display: "flex"
       })
     )
   ]),
   transition(":leave", [
     style({
       transform: "translateX(0)",
-      display: "flex"
     }),
     animate(
       "500ms",
@@ -108,7 +109,7 @@ export const slideInRight = trigger("slideInRight", [
   ])
 ]);
 
-export const slideInRight2 = trigger("slideInRight", [
+export const slideInRight2 = trigger("slideInRight2", [
   transition(":enter", [
     style({
       transform: "translateX(-100%)"
@@ -117,14 +118,12 @@ export const slideInRight2 = trigger("slideInRight", [
       "500ms",
       style({
         transform: "translateX(0)",
-        display: "flex"
       })
     )
   ]),
   transition(":leave", [
     style({
       transform: "translateX(0)",
-      display: "flex"
     }),
     animate(
       "500ms",

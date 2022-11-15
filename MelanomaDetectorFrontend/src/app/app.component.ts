@@ -25,56 +25,11 @@ import {
 export class AppComponent{
   notificate: boolean = false;
   title = 'MelanomaDetectorFrontend';
-  about1IsVisible: boolean = false
-  about2IsVisible: boolean = false
+  navBarVisible: boolean = true;
+  constructor(){}
 
-  mapVisible: boolean = false;
-  ScanPageVisible: boolean = false;
-
-  constructor( private clipboard: Clipboard){}
-
-  scrollToElement($element:any): void {
-    console.log($element);
-    $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  scrollToElement(): void {
   }
-
-  goToScanPage(){
-
-    if(this.ScanPageVisible == false){
-      this.ScanPageVisible = true;
-    }else{
-      this.ScanPageVisible = false;
-
-    }
-  }
-
-  changeMapVisible(){
-    if(this.mapVisible == false){
-      this.ScanPageVisible = false;
-      this.mapVisible = true;
-    }else{
-      this.mapVisible = false;
-    }
-  }
-
-  showAbout1() {
-    if( this.about1IsVisible == true){
-      this.about1IsVisible = false;
-    }else{
-      this.about1IsVisible = true;
-    }
-    }
-
-  showAbout2(){
-    if( this.about2IsVisible == true){
-      this.about2IsVisible = false;
-    }else{
-      this.about2IsVisible = true;
-    }
-  }
-
-
-
 
 
 }

@@ -1,0 +1,58 @@
+<div class="FullScanPage">
+  <div class="circle1"></div>
+  <div class="circle2"></div>
+  <div class="circle3"></div>
+  <div class="circle4"></div>
+  <div class="uploadArea" *ngIf="!file && per=='' && res ==''" [@slideInRight]>
+
+    <div class="uploadButton">
+      <button class="CheckIt desktop-version" type="file" (click)="hiddenfileinput.click()"  clickable> <h2>Upload Photo</h2> </button>
+      <input style="display: none" type="file" (change)="getFile($event)"  #hiddenfileinput>
+    </div>
+
+    <div class="dradAndDrop">
+
+      <label for="files" class="dropText">Or drop it here
+          <input id="files" type="file" class="file" (change)="getFile($event)"/>
+      </label>
+
+    </div>
+
+    <div class="cancelButton">
+      <button class="CancelButton desktop-version" type="file"  clickable (click)="GoToHomePage()"> <h2>Cancel</h2> </button>
+    </div>
+  </div>
+
+  <div class="MainBoxScanPage" *ngIf="file && per=='' && res ==''" [@slideInLeft] >
+
+    <img class="uploadedImage" [src]="file">
+
+    <div>
+      <button class="scanButton" (click)="scan(file)"> Scan </button>
+      <button class="backButton" (click)="anime()"> Back </button>
+    </div>
+
+  </div>
+
+  <div class="MainBoxResultPage" *ngIf="per!='' && res !=''" [@slideInLeft]>
+    <div class="wholeContent">
+      <div class="textAndButton">
+        <div class="texts">
+          <h1 class="title">Result</h1>
+          <p class="wordResult">Possibility of melanoma: {{res}}%</p>
+          <p class="percent">Result: {{per}}</p>
+        </div>
+        <div class="resultButtons">
+          <button class="resultBackButton" (click)="GoToHomePage()"> To home page </button>
+          <button class="resultMap" (click)="GoToMapFromResult()"> Clinics map </button>
+        </div>
+      </div>
+      <div class="scanImage">
+
+          <img class="resultImage" [src]="file">
+      </div>
+    </div>
+
+  </div>
+
+</div>
