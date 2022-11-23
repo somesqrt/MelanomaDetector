@@ -16,6 +16,10 @@ isic-cli = "4.2.0"
 kaggle = "1.5.12"
 numpy = "1.23.4"
 pandas = "1.5.1"
+flask-sqlalchemy = "3.0.2"
+flask-migrate = "4.0.0"
+python-slugify = "7.0.0"
+flask-script = "*"
 
 [dev-packages]
 

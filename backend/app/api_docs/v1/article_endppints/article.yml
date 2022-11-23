@@ -1,0 +1,71 @@
+Get one article by slug
+
+---
+tags:
+  - Article
+
+security:
+  - bearerAuth: []
+
+parameters:
+  - in: path
+    name: Slug   # Note the name is the same as in the path
+    required: true
+    schema:
+      type: string
+      description: slug of article
+
+responses:
+  200:
+    description: Result
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/V1_Article'        
+
+  500:
+    description: Error if something has failed during processing of the request. This event will be logged.
+    content:
+      application/json:
+        example:
+          message: "error"
+          error: true
+
+definitions:
+  V1_Article:
+    type: object  
+    properties:
+      id:
+        type: number
+        example: 1
+      title:
+        type: string
+        example: "title"
+      language:
+        type: string
+        example: "language"
+      source:
+        type: string
+        example: "source"
+      url_source:
+        type: string
+        example: "url_source"
+      date:
+        type: string
+        example: "date"
+      authors:
+        type: string
+        example: "authors"
+      category:
+        type: string
+        example: "category"
+      short_description:
+        type: string
+        example: "short_description"
+      slug:
+        type: string
+        example: "slug"
+      html_content:
+        type: string
+        example: "html_content"
+      
