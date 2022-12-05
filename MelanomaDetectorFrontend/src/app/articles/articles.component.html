@@ -1,0 +1,22 @@
+<div class="wholeHtml">
+  <div class="bloks" *ngIf=allArticleVisible>
+    <mat-card *ngFor="let article of article" class="card" (click)="show(article)" >
+
+      <mat-card-header>
+        <mat-card-title class="mc-title">
+          <h1 class="order">{{article.order}}</h1>
+        </mat-card-title>
+
+        <mat-card-subtitle class="mc-subtitle">
+          <h3 class="mainPoint">{{article.mainPoint}}</h3>
+        </mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
+
+  <div  *ngIf=!allArticleVisible>
+    <app-article></app-article>
+  </div>
+</div>
+
+
