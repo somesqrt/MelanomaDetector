@@ -1,5 +1,10 @@
 version: "3"
 services:
+    
+    frontend:
+      build: ./MelanomaDetectorFrontend
+      ports:
+        - "4200:4200"
     backend:
       build: ./backend
       hostname: backend
