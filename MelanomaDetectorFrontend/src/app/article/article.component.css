@@ -1,0 +1,52 @@
+.whole{
+  margin-top: 2%;
+  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%,rgb(173, 209, 255) 100%,  rgb(130, 170, 224) 100%);
+}
+
+.backButtonToAllArticles{
+  position: fixed;
+  text-align: center;
+  vertical-align: middle;
+  width: 4%;
+  height: 80%;
+  display: inline-block;
+  background-color: rgba(185, 177, 177, 0.17);
+  border-radius: 0 50px 50px 0;
+}
+
+.backText{
+  margin-top: 12vh;
+  margin-left: 5%;
+  font-size: 60pt;
+  font-family: "Metropolis Medium";
+}
+
+h1{
+  writing-mode: vertical-rl;
+  letter-spacing: 15vh;
+}
+
+.backButtonToAllArticles:hover{
+  background-color: rgba(89, 88, 88, 0.33);
+  transform: scaleX(1.1) scaleY(1.1);
+}
+
+.articleContent{
+  width: 90%;
+  margin-left: 7%;
+  margin-right: 3%;
+  display: inline-block;
+  white-space: normal;
+  font-size: 27pt;
+}
+
+.title{
+  font-family: "Metropolis Medium";
+  font-size: 40pt;
+  margin-bottom: 2%;
+}

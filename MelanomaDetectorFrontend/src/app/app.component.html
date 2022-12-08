@@ -1,25 +1,10 @@
-<h1>Melanoma Detector</h1>
-
-<div class="uploadArea" *ngIf="!file">
-  <button class="uploadButton">
-    <label>
-      Click here
-      <input type="file" (change)="getFile($event)" class="file " />
-    </label>
-  </button>
-
-  <div class="dropArea" >
-    <label>
-      Drop here
-    <input type="file" (change)="getFile($event)" class="file " />
-    </label>
-  </div>
+<div class="nav-bar" *ngIf="navBarVisible">
+  <a href="#articles" routerLink="/home" class="nav-link"  >Home</a>
+  <a href="#contactUs" class="nav-link" href="mailto:contactUs@gmail.com" >Contact Us</a>
+  <a id ="ar" routerLink="/articles" routerLinkActive="active" ariaCurrentWhenActive="page" class="nav-link"  >Articles</a>
+  <div class="notificate" *ngIf="notificate" [@notification]> Mail copied </div>
 </div>
+<router-outlet></router-outlet>
 
-<div class="uploadArea" *ngIf="file">
-  <img [src]="file"  width="700" height="700">
-  <button (click)="file=undefined">Clear image</button>
-  <button (click)="uploadFile()">Check it</button>
-</div>
 
 

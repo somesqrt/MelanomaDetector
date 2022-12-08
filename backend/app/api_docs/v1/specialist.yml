@@ -1,0 +1,90 @@
+Get array of specialists
+
+---
+tags:
+  - Specialist
+
+security:
+  - bearerAuth: []
+
+
+responses:
+  200:
+    description: Result
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/V1_Specialists'        
+
+  500:
+    description: Error if something has failed during processing of the request. This event will be logged.
+    content:
+      application/json:
+        example:
+          message: "error"
+          error: true
+
+definitions:
+  V1_Specialist_General:
+    type: object  
+    properties:
+      id:
+        type: number
+        example: 1
+      clinics:
+        type: string
+        example: "clinics"
+      doctor:
+        type: string
+        example: "doctor"
+      web:
+        type: string
+        example: "web"
+      mail:
+        type: string
+        example: "mail"
+      phone:
+        type: string
+        example: "phone"
+      city:
+        type: string
+        example: "city"
+      street:
+        type: string
+        example: "street"
+      floor:
+        type: number
+        example: 1
+      postal_code:
+        type: string
+        example: "postal_code"
+      longitude:
+        type: number
+        example: 45.5456546
+      latitude:
+        type: number
+        example: 45.5456546
+      private:
+        type: boolean
+        example: true
+      working_hours:
+        type: string
+        example: "working_hours"
+      online_reservation:
+        type: string
+        example: "online_reservation"
+      health_insurance:
+        type: string
+        example: "health_insurance"
+  
+  V1_Specialists:
+    properties:
+      data:
+        type: array
+        items:
+          oneOf:
+            - $ref: '#/definitions/V1_Specialist_General'
+            - $ref: '#/definitions/V1_Specialist_General'
+
+
+      

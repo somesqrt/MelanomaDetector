@@ -1,0 +1,56 @@
+Get one articles in array
+
+---
+tags:
+  - Article
+
+security:
+  - bearerAuth: []
+
+
+responses:
+  200:
+    description: Result
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/V1_Articles'        
+
+  500:
+    description: Error if something has failed during processing of the request. This event will be logged.
+    content:
+      application/json:
+        example:
+          message: "error"
+          error: true
+
+definitions:
+  V1_Article_General:
+    type: object  
+    properties:
+      id:
+        type: number
+        example: 1
+      title:
+        type: string
+        example: "title"
+      short_description:
+        type: string
+        example: "short_description"
+      slug:
+        type: string
+        example: "slug"
+  
+  V1_Articles:
+    properties:
+      data:
+        type: array
+        items:
+          oneOf:
+            - $ref: '#/definitions/V1_Article_General'
+            - $ref: '#/definitions/V1_Article_General'
+            - $ref: '#/definitions/V1_Article_General'
+            - $ref: '#/definitions/V1_Article_General'
+            - $ref: '#/definitions/V1_Article_General'
+
+      

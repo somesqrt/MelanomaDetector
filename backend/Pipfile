@@ -20,6 +20,10 @@ opencv-python = "4.6.0.66"
 matplotlib = "3.6.1"
 tensorflow = "2.10.0"
 scikit-learn = "1.1.2"
+flask-sqlalchemy = "3.0.2"
+flask-migrate = "4.0.0"
+python-slugify = "7.0.0"
+flask-script = "*"
 
 [dev-packages]
 

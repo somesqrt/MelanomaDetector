@@ -16,7 +16,7 @@ RUN pip install -r requirements.txt
 ADD . .
 
 # default Tini startup
-ENTRYPOINT ["/tini", "--"]
+ENTRYPOINT ["make", "/tini", "--"]
 
 # Run your program under Tini
-CMD ["sh", "docker-entrypoint.sh"]
+CMD ["run"]
