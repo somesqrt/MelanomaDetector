@@ -24,6 +24,7 @@ flask-sqlalchemy = "3.0.2"
 flask-migrate = "4.0.0"
 python-slugify = "7.0.0"
 flask-script = "*"
+pydicom = "*"
 
 [dev-packages]
 
