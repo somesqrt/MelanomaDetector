@@ -11,3 +11,5 @@ class Config(object):
     DEVELOPMENT = True
     SQLALCHEMY_DATABASE_URI = os.getenv("SQLALCHEMY_DATABASE_URI")
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    APPLICATION_ROOT = '/backend/'
+    SCRIPT_NAME ='/backend/'
