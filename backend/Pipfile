@@ -22,15 +22,10 @@ scikit-learn = "1.1.2"
 flask-sqlalchemy = "3.0.2"
 flask-migrate = "4.0.0"
 python-slugify = "7.0.0"
-<<<<<<< HEAD
-flask-script = "*"
-pydicom = "*"
-=======
 flask-script = "2.0.6"
 pydicom = "2.3.1"
 tensorflow = "==2.10.0"
 imgaug = "*"
->>>>>>> 9aec2a3718a0497b758cd2b7f9b4ec8285a0dfc6
 
 [dev-packages]
 
