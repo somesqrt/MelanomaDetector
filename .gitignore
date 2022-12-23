@@ -8,3 +8,4 @@ backend/app/__pycache__/
 backend/app/api_v1/__pycache__/
 backend/__pycache__/
 backend/app/models/__pycache__/
+backend/Pipfile.lock
