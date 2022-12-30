@@ -1,17 +1,31 @@
 <div class="wholeHtml">
+
   <div class="bloks" *ngIf=allArticleVisible>
+    <div class="articles">
+      <h1 class="articlesText">Articles</h1>
+    </div>
     <mat-card *ngFor="let article of article" class="card" (click)="show(article)" >
 
-      <mat-card-header>
+      <img src={{article.image}} class="articlesImage" />
+
+
+      <mat-card-header class="header-card">
         <mat-card-title class="mc-title">
-          <h1 class="order">{{article.order}}</h1>
+          <h3 class="mainPoint">{{article.title}}</h3>
         </mat-card-title>
 
         <mat-card-subtitle class="mc-subtitle">
-          <h3 class="mainPoint">{{article.mainPoint}}</h3>
+          <p class="shortDescription">{{article.short_description}}</p>
+          <br>
+          <div class="buttonToRead">
+            <p class="readMoreButton">Read more</p>
+          </div>
         </mat-card-subtitle>
       </mat-card-header>
+
+
     </mat-card>
+
   </div>
 
   <div  *ngIf=!allArticleVisible>

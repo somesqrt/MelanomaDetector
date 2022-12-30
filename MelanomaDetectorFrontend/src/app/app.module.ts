@@ -13,6 +13,7 @@ import { ArticlesComponent } from './articles/articles.component';
 import { RoutingComponent } from './routing/routing.component';
 import { HomepageComponent } from './homepage/homepage.component'
 import {MatCardModule} from "@angular/material/card";
+import { ContactPageComponent } from './contact-page/contact-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import {MatCardModule} from "@angular/material/card";
     ScanPageComponent,
     ArticlesComponent,
     RoutingComponent,
-    HomepageComponent
+    HomepageComponent,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,

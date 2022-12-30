@@ -14,6 +14,7 @@ import {
   slideOutTopLinks,
   notification, slideOutTopLinks2
 } from "./animation/animations";
+import {UploadService} from "./upload.service";
 
 @Component({
   selector: 'app-root',
@@ -26,7 +27,7 @@ export class AppComponent{
   notificate: boolean = false;
   title = 'MelanomaDetectorFrontend';
   navBarVisible: boolean = true;
-  constructor(){}
+  constructor(public uploadService: UploadService){}
 
   scrollToElement(): void {
   }

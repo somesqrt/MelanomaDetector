@@ -1,7 +1,7 @@
 <div class="nav-bar" *ngIf="navBarVisible">
   <a href="#articles" routerLink="/home" class="nav-link"  >Home</a>
-  <a href="#contactUs" class="nav-link" href="mailto:contactUs@gmail.com" >Contact Us</a>
-  <a id ="ar" routerLink="/articles" routerLinkActive="active" ariaCurrentWhenActive="page" class="nav-link"  >Articles</a>
+  <a href="#contactUs" class="nav-link" routerLink="/contact" >Contact Us</a>
+  <a id ="ar" routerLink="/articles" routerLinkActive="active" ariaCurrentWhenActive="page" class="nav-link" (click)="uploadService.getArticles()" >Articles</a>
   <div class="notificate" *ngIf="notificate" [@notification]> Mail copied </div>
 </div>
 <router-outlet></router-outlet>

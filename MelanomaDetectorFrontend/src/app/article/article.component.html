@@ -2,12 +2,12 @@
   <div class="backButtonToAllArticles" (click)="changeVisible()">
     <h1 class="backText">BACK</h1>
   </div>
-  <div class="articleContent">
-    <div class="title">
-      {{article[index].mainPoint}}
-    </div>
-    <div>
-      {{article[index].content}}
+  <div class="art">
+    <div class="articleContent">
+      <h1 class="title">{{uploadService.fullResult.title}}</h1>
+      <img src={{uploadService.fullResult.image}} class="bigImage"/>
+      <div *ngIf="uploadService.fullResult.html_content" [innerHTML]="uploadService.fullResult.html_content">
+      </div>
     </div>
   </div>
 </div>
