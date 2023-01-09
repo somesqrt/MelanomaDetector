@@ -2,7 +2,7 @@ from . import api_v1
 from flasgger import swag_from
 from flask import request
 from app import InvalidUsage
-import random
+# import random
 import numpy as np
 import base64
 import cv2

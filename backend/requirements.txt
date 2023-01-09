@@ -4,18 +4,18 @@ flasgger==0.9.5
 flask-httpauth==4.7.0
 gunicorn==20.1.0
 psycopg2-binary==2.9.4
-python-dotenv==0.21.0
-ipykernel==6.16.0
-isic-cli==4.2.0
-kaggle==1.5.12
+# python-dotenv==0.21.0
+# ipykernel==6.16.0
+# isic-cli==4.2.0
+# kaggle==1.5.12
 numpy==1.23.4
-pandas==1.5.1
+# pandas==1.5.1
 opencv-python==4.6.0.66
-matplotlib==3.6.1
+# matplotlib==3.6.1
 tensorflow==2.10.0
-scikit-learn==1.1.2
+# scikit-learn==1.1.2
 flask-sqlalchemy==3.0.2
 flask-migrate==4.0.0
 python-slugify==7.0.0
-flask-script==2.0.6
-pydicom==2.3.1
+# flask-script==2.0.6
+# pydicom==2.3.1
