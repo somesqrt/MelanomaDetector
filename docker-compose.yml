@@ -55,21 +55,21 @@ services:
         start_period: 5s
 
     # NGINX SERVICE
-    # server:
-    #   image: nginx
-    #   volumes:
-    #     - ./deploy/nginx/nginx.conf:/etc/nginx/nginx.conf
-    #   ports:
-    #     - 80:80
-    #     - 443:443
-    #   links:
-    #     - backend
-    #     - frontend
+    server:
+      image: nginx
+      volumes:
+        - ./deploy/nginx/nginx.conf:/etc/nginx/nginx.conf
+      ports:
+        - 80:80
+        - 443:443
+      links:
+        - backend
+        - frontend
       
 
 
 volumes:
   melanoma_db_vol:
 
-# networks:
-#   melanoma:
+networks:
+  melanoma:
