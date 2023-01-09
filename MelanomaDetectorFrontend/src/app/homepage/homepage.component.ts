@@ -10,6 +10,7 @@ import {
 } from "../animation/animations";
 import { AppComponent } from "../app.component";
 import {Clipboard} from "@angular/cdk/clipboard";
+import {UploadService} from "../upload.service";
 
 @Component({
   selector: 'app-homepage',
@@ -18,7 +19,7 @@ import {Clipboard} from "@angular/cdk/clipboard";
   animations: [slideInLeft, slideInRight, slideInLeft2,slideInRight2, slideInTop2, slideOutTopLinks, notification, slideOutTopLinks2],
 })
 
-export class HomepageComponent{
+export class HomepageComponent implements OnInit{
   title = 'MelanomaDetectorFrontend';
   about1IsVisible: boolean = false
   about2IsVisible: boolean = false
@@ -26,7 +27,11 @@ export class HomepageComponent{
   mapVisible: boolean = false;
   ScanPageVisible: boolean = false;
   HTMLElementContact = document.getElementById('conctactUsField');
-  constructor( private clipboard: Clipboard, private appComponent:AppComponent){}
+  constructor( private clipboard: Clipboard, private appComponent:AppComponent, private uploadService: UploadService){}
+
+  ngOnInit(): void {
+      this.uploadService.getArticles()
+    }
 
   scrollToElement(): void {
     this.HTMLElementContact!.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});

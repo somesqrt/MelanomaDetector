@@ -4,21 +4,22 @@ import {ARTICLES} from "../interfaces/mockedArticles";
 import {AppComponent} from "../app.component";
 import { ArticleComponent } from "../article/article.component";
 import {ActivatedRoute, Router} from "@angular/router";
+import {UploadService} from "../upload.service";
 
 @Component({
   selector: 'app-articles',
   templateUrl: './articles.component.html',
-  styleUrls: ['./articles.component.css']
+  styleUrls: ['./articles.component.scss', "./articles.component.css"]
 })
 export class ArticlesComponent implements OnInit{
 
-  @Input() article = ARTICLES;
+  constructor(private uploadService: UploadService, private appComponent: AppComponent, public router:Router, private location: Location) {}
+
+  @Input() article = this.uploadService.shortResult;
   index!: number ;
+  slug!: string;
   indexString!: string;
   allArticleVisible: boolean = true;
-
-  constructor( private appComponent: AppComponent, public router:Router, private location: Location) {}
-
 
   changeVisible(){
     if(this.allArticleVisible == true){
@@ -29,21 +30,21 @@ export class ArticlesComponent implements OnInit{
   }
 
   show(something: any){
-    this.index = something.id;
+    console.log("Vot slug cel = " + something.slug)
+    this.slug = something.slug;
     this.changeVisible()
-    this.indexString= String(this.index);
-    this.location.replaceState("/articles/" + this.index);
-
-    console.log(this.indexString)
+    //this.indexString= String(this.index);
+    this.location.replaceState("/articles/" + this.slug);
   }
 
   ngOnInit(): void {
     let url = this.router.url;
+    console.log(url)
     url = url.slice(10, url.length);
-    if(Number(url)){
-      this.index = parseInt(url);
+    if(url != ""){
+      this.slug = url;
       this.changeVisible()
-      this.indexString= String(this.index);
     }
+    this.uploadService.getArticles()
   }
 }

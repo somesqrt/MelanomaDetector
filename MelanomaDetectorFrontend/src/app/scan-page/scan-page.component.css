@@ -12,6 +12,27 @@
   z-index: 1;
 }
 
+.attention{
+  width: 80%;
+  height: 17%;
+  border-radius: 40px;
+  background-color: #910000;
+  margin-top: 7%;
+  position: relative;
+  left: 10%;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+}
+
+.attentionText{
+  color: #ffffff;
+  position: relative;
+  top: 20%;
+  font-size: 25px;
+  font-family: Metropolis;
+}
+
 .circle1{
   position: absolute;
   top: -12%;

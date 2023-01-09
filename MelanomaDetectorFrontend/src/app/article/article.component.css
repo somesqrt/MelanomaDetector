@@ -5,7 +5,16 @@
   min-height: 100vh;
   height: 100%;
   display: flex;
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%,rgb(173, 209, 255) 100%,  rgb(130, 170, 224) 100%);
+  background-image: url("src/assets/img/firstLine.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100%;}
+
+.art{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
 }
 
 .backButtonToAllArticles{
@@ -24,12 +33,11 @@
   margin-left: 5%;
   font-size: 60pt;
   font-family: "Metropolis Medium";
-}
-
-h1{
   writing-mode: vertical-rl;
   letter-spacing: 15vh;
 }
+
+
 
 .backButtonToAllArticles:hover{
   background-color: rgba(89, 88, 88, 0.33);
@@ -37,7 +45,7 @@ h1{
 }
 
 .articleContent{
-  width: 90%;
+  width: 80%;
   margin-left: 7%;
   margin-right: 3%;
   display: inline-block;
@@ -46,7 +54,29 @@ h1{
 }
 
 .title{
+  margin-top: 2%;
+  font-family: "Metropolis Medium";
+  font-size: 70pt;
+  margin-bottom: 2%;
+}
+
+.bigImage{
+  width: 100%;
+}
+
+h2{
+  margin-top: 3%;
   font-family: "Metropolis Medium";
   font-size: 40pt;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
+}
+
+h3{
+  font-family: "Metropolis Medium";
+  margin-top: 1%;
+  font-size: 30pt;
+}
+
+p{
+  font-family: "Metropolis Medium";
 }
