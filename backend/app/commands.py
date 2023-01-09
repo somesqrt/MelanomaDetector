@@ -69,13 +69,15 @@ def add_articles():
         'date',
         'authors',
         'category',
-        'html_content'
+        'html_content',
+        'image',
     ]
-    f = open('data/data_melanoma.json', encoding='utf-8')
+    f = open('data/data_melanoma_html_update.json', encoding='utf-8')
     data = json.load(f)
     articles = []
     for article in data['Melanoma_info']:
-        database_article = ArticleModel(title=article['title'], content=article['content'])
+        database_article = ArticleModel(
+            title=article['title'], content=article['content'])
         for key in keys:
             value = article.get(key, None)
             database_article[key] = value
@@ -83,7 +85,6 @@ def add_articles():
         articles.append(database_article)
         print('created ' + str(article.get('title', None)))
         db.session.add(database_article)
-        db.session.commit() 
-
+        db.session.commit()
 
     print('added all articles')

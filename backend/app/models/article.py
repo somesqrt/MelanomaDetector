@@ -9,6 +9,7 @@ class ArticleModel(db.Model):
     title = db.Column(db.String())
     language = db.Column(db.String())
     source = db.Column(db.String())
+    image = db.Column(db.String())
     url_source = db.Column(db.String())
     date = db.Column(db.String())
     authors = db.Column(db.String())
@@ -31,7 +32,8 @@ class ArticleModel(db.Model):
             'id': self.id,
             'title': self.title,
             'slug': self.slug,
-            'short_description': self.short_description
+            'short_description': self.short_description,
+            'image': self.image
         }
 
     def serialize_all(self):
@@ -46,7 +48,8 @@ class ArticleModel(db.Model):
             'category': self.category,
             'short_description': self.short_description,
             'html_content': self.html_content,
-            'slug': self.slug
+            'slug': self.slug,
+            'image': self.image
         }
 
     def __setitem__(self, key, value):
