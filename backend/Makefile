@@ -17,3 +17,6 @@ add_specialists:
 
 add_articles:
 	flask add_articles
+
+delete_articles:
+	flask delete_articles

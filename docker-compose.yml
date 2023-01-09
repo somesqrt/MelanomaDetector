@@ -1,38 +1,38 @@
 version: "3"
 services:
     # FRONTEND SERVICE
-    frontend:
-      build: ./MelanomaDetectorFrontend
-      hostname: frontend
-      ports:
-        - "4200:80"
+    # frontend:
+    #   build: ./MelanomaDetectorFrontend
+    #   hostname: frontend
+    #   ports:
+    #     - "4200:80"
     
     # BACKEND SERVICE
-    backend:
-      build: ./backend
-      hostname: backend
-      command: 
-        - upgrade
-        - add_articles
-        - add_specialists
-        - gunicorn
-      environment:
-        FLASK_DEBUG: ${FLASK_DEBUG}
-        TESTING: ${TESTING}
-        CSRF_ENABLED: ${CSRF_ENABLED}
-        SWAGGER_USERNAME: ${SWAGGER_USERNAME}
-        SWAGGER_PASSWORD: ${SWAGGER_PASSWORD}
-        SECRET_KEY: ${SECRET_KEY}
-        SQLALCHEMY_DATABASE_URI: ${SQLALCHEMY_DATABASE_URI}
-      expose:
-        - 8000
-      ports:
-        - "8000:8000"
-      volumes:
-        - ./backend:/deploy
-      depends_on:
-        db:
-          condition: service_healthy
+    # backend:
+    #   build: ./backend
+    #   hostname: backend
+    #   command: 
+    #     - upgrade
+    #     - add_articles
+    #     - add_specialists
+    #     - gunicorn
+    #   environment:
+    #     FLASK_DEBUG: ${FLASK_DEBUG}
+    #     TESTING: ${TESTING}
+    #     CSRF_ENABLED: ${CSRF_ENABLED}
+    #     SWAGGER_USERNAME: ${SWAGGER_USERNAME}
+    #     SWAGGER_PASSWORD: ${SWAGGER_PASSWORD}
+    #     SECRET_KEY: ${SECRET_KEY}
+    #     SQLALCHEMY_DATABASE_URI: ${SQLALCHEMY_DATABASE_URI}
+    #   expose:
+    #     - 8000
+    #   ports:
+    #     - "8000:8000"
+    #   volumes:
+    #     - ./backend:/deploy
+    #   depends_on:
+    #     db:
+    #       condition: service_healthy
     
     # POSTGRES DATABASE SERVICE
     db:
@@ -54,21 +54,21 @@ services:
         start_period: 5s
 
     # NGINX SERVICE
-    server:
-      image: nginx
-      volumes:
-        - ./deploy/nginx/nginx.conf:/etc/nginx/nginx.conf
-      ports:
-        - 80:80
-        - 443:443
-      links:
-        - backend
-        - frontend
+    # server:
+    #   image: nginx
+    #   volumes:
+    #     - ./deploy/nginx/nginx.conf:/etc/nginx/nginx.conf
+    #   ports:
+    #     - 80:80
+    #     - 443:443
+    #   links:
+    #     - backend
+    #     - frontend
       
 
 
 volumes:
   melanoma_db_vol:
 
-networks:
-  melanoma:
+# networks:
+#   melanoma:

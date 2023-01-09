@@ -3,10 +3,12 @@ from flask_cors import CORS
 from .config import Config
 from .swagger import init_swagger
 import logging
+from tensorflow.keras.models import load_model
+model = load_model('./model/first/future-2.hdf5')
 app = Flask(__name__)
 from .extensions import db
 from flask_migrate import Migrate
-from .commands import add_specialists, add_articles
+from .commands import add_specialists, add_articles, delete_articles
 
 
 
@@ -57,6 +59,7 @@ decorators = Decorators()
 # add command function to cli commands
 app.cli.add_command(add_specialists)
 app.cli.add_command(add_articles)
+app.cli.add_command(delete_articles)
 
 from .api_v1 import api_v1
 app.register_blueprint(api_v1, url_prefix='/v1/')

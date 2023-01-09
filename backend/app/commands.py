@@ -88,3 +88,10 @@ def add_articles():
         db.session.commit()
 
     print('added all articles')
+
+
+@click.command(name='delete_articles')
+@with_appcontext
+def delete_articles():
+    ArticleModel.query.delete()
+    print('deleted all articles')
