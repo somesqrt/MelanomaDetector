@@ -34,5 +34,5 @@ def clasify():
     # percentage = random.uniform(0.00, 98.50)
     return {
         'result': responses[index],
-        'percentage': float(max(result[0]))
+        'percentage': float(max(result[0]) * 100)
     }
