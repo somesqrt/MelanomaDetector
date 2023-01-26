@@ -1,5 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/metropolis.min.css");
-
+@media only screen and (min-width: 1001px){
 * {
   margin: 0;
   padding: 0;
@@ -668,6 +668,7 @@ h2{
   transform: translateY(-3px);
   transform: scaleX(1.1) scaleY(1.1);
 }
+}
 
 @media only screen and (max-width: 1920px){
   * {
@@ -686,48 +687,45 @@ h2{
     padding: 0;
   }
 
-  .dropArea{
-    display: none;
-  }
   .desktop-version{
     display: none;
   }
   .mobile-version{
     display: inline-block;
   }
-
-  .nav-link{
-    padding: 20px;
-    font-size: 12pt;
-  }
-
-
-  .nav-bar{
-    padding-top: 10%;
-  }
-
   .content{
     height: 100%;
   }
 
+  .simple-linear{
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(233,237,248,1) 100%);
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+  }
+
   .first-title{
-    padding-left: 5%;
-    font-size: 24pt;
+    padding-left: 3%;
+    padding-top: 20%;
+    font-size: 50pt;
+    font-family: "Metropolis Medium";
   }
   .subtitle{
+    font-family: "Metropolis Medium";
+    padding-left: 4%;
+    padding-top: 2%;
+    padding-left: 3%;
     width: 70%;
-    padding-top: 10%;
-    padding-left: 5%;
-    font-size: 12pt;
+    font-size: 24pt;
     color: rgba(0, 0, 0, 0.6);
   }
   .MainBoxMainPage{
     height: 100%;
-    position: relative;
-    float: left;
+    display: block;
+
     white-space: normal;
   }
-
   .MainBoxMapPage{
     width: 100%;
     height: 100%;
@@ -738,55 +736,72 @@ h2{
     text-align: center;
     align-items: center;
   }
-
   .left{
     width: 100%;
-    height: 40%;
+    height: 100%;
   }
-
   .third-button{
     text-align: center;
     padding-top: 5%;
+    margin-bottom: 2%;
     height: 6%;
     width: 100%;
   }
-
   .right{
+    text-align: center;
     width: 100%;
-    height: 30%;
+    height: 100%;
   }
   .img{
-    height: 100%;
-    width: 60%;
-    margin-left: 20%;
+    height: 30vh;
+    width: 30vh;
   }
 
   .buttons{
     text-align: left;
-    padding: 0;
+    padding-top: 3%;
   }
 
   .CheckIt{
-    margin-left: 10%;
-    margin-top: 10%;
-    padding: 10px;
-    width: 32%;
-    padding: 15px;
-    font-size: 15px;
-    font-family: Metropolis;
-  }
-
-  .CheckIt2{
-    width: 32%;
-    margin-left: 10%;
-    padding: 15px;
-    font-size: 15px;
+    margin-left: 6%;
+    width: 25%;
+    padding: 18px;
+    font-size: 20px;
     background-color: #722ED1;
     border: 0;
     color: white;
     border-radius: 50px;
     font-family: Metropolis;
   }
+
+  .CheckIt:hover{
+    box-shadow: 0 15px 20px rgb(0 0 0 / 20%);
+    transform: translateY(-3px);
+    transform: scaleX(1.1) scaleY(1.1);
+  }
+
+  .uploadButton{
+    margin-left: 36%;
+  }
+
+  .Map{
+    width: 28%;
+    padding: 18px;
+    font-size: 20px;
+    background-color: white;
+    border: 0;
+    color: #722ED1;
+    border-radius: 50px;
+    font-family: Metropolis;
+    margin-left: 25%;
+  }
+
+  .Map:hover{
+    box-shadow: 0 15px 20px rgb(0 0 0 / 20%);
+    transform: translateY(-3px);
+    transform: scaleX(1.1) scaleY(1.1);
+  }
+
 
   .Map{
     padding: 10px;
@@ -797,14 +812,6 @@ h2{
 
   }
 
-  .simple-linear {
-    background-image: url("src/assets/img/firstLine-mobile.svg");
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 35%;
-    width: 100%;
-  }
 
   .benefits{
     width: 100%;
@@ -815,8 +822,42 @@ h2{
   }
 
   h2{
-    font-size: 20pt;
+    align-self: center;
+    font-family: Metropolis;
+    font-weight: bold;
+    font-size: 30pt;
   }
+
+  h4{
+    margin-top: 2%;
+    align-self: center;
+    font-family: Metropolis;
+    font-weight: bold;
+  }
+
+  p{
+    margin-top: 3%;
+    align-self: center;
+    font-family: Metropolis;
+  }
+
+  .title-technology{
+    margin-left: 1%;
+    margin-top: 2%;
+    font-family: Metropolis;
+    white-space: normal;
+    font-size: 30pt;
+  }
+
+  .subtitle-technology{;
+    font-family: Metropolis;
+    margin-top: 4%;
+    margin-left: 1%;
+    white-space: normal;
+    font-size: 17pt;
+    width: 60%
+  }
+
 
   .benefits-blocks{
     margin-top: 3%;
@@ -848,17 +889,16 @@ h2{
     height: 50%;
   }
 
-  .title-technology{
-    margin-left: 0;
-    font-size: 16pt;
+  .person-foto{
+    width: 30%;
+    height: 30%;
   }
-
-  .subtitle-technology{
-    margin-left: 0;
-    font-size: 11pt;
-    width: 70%
+  .people{
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 80%;
+    text-align: center;
   }
-
   .experts-backgroud{
     background-image: url("src/assets/img/secondLine-mobile.svg");
     height: 55%;
@@ -868,16 +908,83 @@ h2{
   }
 
   .experts-title{
-    padding-top: 30%;
-    font-size: 20pt;
+    margin-left: 4%;
+    font-family: Metropolis;
+    padding-top: 13%;
+    font-size: 30pt;
+    width: 60%;
+  }
+
+  .person-name{
+    margin-top: 8%;
+    font-size: 15pt;
+    font-family: Metropolis;
+  }
+
+  .contactUs{
+    margin-top: 10%;
+    height: 5%;
+    white-space:nowrap;
+    display: block;
+    width: 100%;
+    vertical-align:bottom;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contactUsText{
+    width: 100%;
+    vertical-align:center;
+    vertical-align:center;
+    display: block;
+  }
+
+  .UsText{
+    font-size: 30px;
+    font-family: Metropolis;
+  }
+
+  .contactUsButton{
+    width: 100%;
+    vertical-align:bottom;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20%;
+    width: 100%;
+    display: block;
+  }
+
+  .ContactUsMail{
+    text-decoration:none;
+    width: 28%;
+    padding: 30px;
+    font-size: 25px;
+    background-color: #a3dfea;
+    border: 0;
+    color: #000000;
+    border-radius: 50px;
+    font-family: Metropolis;
+    box-shadow: 10px 5px 10px rgba(112, 162, 135, 0.2)
+  }
+
+  .ContactUsMail:hover{
+    box-shadow: 0 15px 20px rgb(0 0 0 / 20%);
+    transform: translateY(-3px);
+    transform: scaleX(1.1) scaleY(1.1);
+  }
+
+  .footer{
+    margin-top: 10%;
+    height: 10%;
+    text-align: center;
   }
 
   .columns{
     margin-left: 0;
     width: 100%;
   }
-
-
   .column{
     vertical-align: top;
     display: inline-block;
@@ -885,4 +992,44 @@ h2{
     margin-right: 5%;
   }
 
+  .footer-title{
+    font-size: 20pt;
+    font-family: Metropolis;
+  }
+
+  .widget-list {
+    padding: 0;
+    list-style: none;
+    font-family: Metropolis;
+  }
+  .widget-list a:before {
+    margin-right: 14px;
+    font-family: Metropolis;
+  }
+  .widget-list a {
+    text-decoration: none;
+    font-family: Metropolis;
+    outline: none;
+    display: block;
+    padding: 6px 0;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #444;
+
+  }
+  .widget-list a:hover {color: #b99d61;}
+
+  .footer-last-title{
+    margin-top: 3%;
+    height: 10px;
+    display: inline-block;
+    font-family: Metropolis;
+    font-size: 15pt;
+  }
+  .footer-last-icon{
+    padding-top: 2.85%;
+    position: absolute;
+    margin-left: 0.5%;
+    display: inline-block;
+  }
 }

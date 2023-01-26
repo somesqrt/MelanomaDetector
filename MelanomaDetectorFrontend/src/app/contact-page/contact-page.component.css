@@ -1,103 +1,220 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@media only screen and (min-width: 1001px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
-.wholePage{
-  height: 94vh;
-  width: 100%;
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(162, 180, 239, 0.6) 100%, rgb(162, 180, 239) 100%);
-  position: fixed;
-  overflow: hidden;
-}
+  .wholePage {
+    height: 94vh;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(162, 180, 239, 0.6) 100%, rgb(162, 180, 239) 100%);
+    position: fixed;
+    overflow: hidden;
+  }
 
-.verticalLine{
-  border-radius: 10px;
-  height: 500px;
-  border-left: 8px solid #728686;
-}
+  .verticalLine {
+    border-radius: 10px;
+    height: 500px;
+    border-left: 8px solid #728686;
+  }
 
-.infoAboutProjekt{
-  width: 90%;
-  border-radius: 50px;
-  background-color: rgba(55, 227, 201, 0.22);
-  height: 20%;
-  align-items: center;
-  margin-top: 1vh;
-  justify-content: center;
-  display: flex;
-  margin-left: 5%;
-}
+  .infoAboutProjekt {
+    width: 90%;
+    border-radius: 50px;
+    background-color: rgba(55, 227, 201, 0.22);
+    height: 20%;
+    align-items: center;
+    margin-top: 1vh;
+    justify-content: center;
+    display: flex;
+    margin-left: 5%;
+  }
 
-h2{
-  text-align: center;
-  margin: 5%;
-  font-size: 35pt;
-  color: black;
-  font-family: "Metropolis Medium";
-}
+  h2 {
+    text-align: center;
+    margin: 5%;
+    font-size: 35pt;
+    color: black;
+    font-family: "Metropolis Medium";
+  }
 
-.contact{
-  margin-top: 1%;
-  height: 49%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
+  .contact {
+    margin-top: 1%;
+    height: 49%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
 
-.leftContactBlock{
-  display: inline-block;
-  width: 50%;
-  text-align: center;
-}
+  .leftContactBlock {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+  }
 
-p{
-  margin-top: 1vh;
-  font-size: 4vh;
-  color: black;
-  font-family: "Metropolis Medium";
-}
+  p {
+    margin-top: 1vh;
+    font-size: 4vh;
+    color: black;
+    font-family: "Metropolis Medium";
+  }
 
-.rightContactBlock{
-  width: 50%;
-  display: inline-block;
-}
+  .rightContactBlock {
+    width: 50%;
+    display: inline-block;
+  }
 
-.contactUsButton{
-  margin-left: 3%;
-  width: 100%;
-  text-align: center;
-}
+  .contactUsButton {
+    margin-left: 3%;
+    width: 100%;
+    text-align: center;
+  }
 
-.ContactUsMail{
-  margin-top: 1vh;
-  text-decoration:none;
-  width: 100%;
-  padding: 5vh;
-  font-size: 4vh;
-  background-color: #a3dfea;
-  border: 0;
-  color: #000000;
-  border-radius: 50px;
-  font-family: Metropolis;
-  box-shadow: 10px 5px 10px rgba(112, 162, 135, 0.2)
-}
+  .ContactUsMail {
+    text-align: center;
+    margin-top: 1vh;
+    text-decoration: none;
+    width: 100%;
+    padding: 5vh;
+    font-size: 4vh;
+    background-color: #a3dfea;
+    border: 0;
+    color: #000000;
+    border-radius: 50px;
+    font-family: Metropolis;
+    box-shadow: 10px 5px 10px rgba(112, 162, 135, 0.2)
+  }
 
-.ContactUsMail:hover{
-  box-shadow: 0 15px 20px rgb(0 0 0 / 20%);
-  transform: translateY(-3px);
-  transform: scaleX(1.1) scaleY(1.1);
-}
+  .ContactUsMail:hover {
+    box-shadow: 0 15px 20px rgb(0 0 0 / 20%);
+    transform: translateY(-3px);
+    transform: scaleX(1.1) scaleY(1.1);
+  }
 
-.images{
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  text-align: right;
-  height: 30%;
-}
+  .images {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: right;
+    height: 30%;
+  }
 
-.logo{
-  margin: 1%;
-  height:10vh;
+  .logo {
+    margin: 1%;
+    height: 10vh;
+  }
+  .mobile{
+    display: none;
+  }
+  .desktop{
+    display: flex;
+  }
+
+}
+@media only screen and (max-width: 1000px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .desktop{
+    display: none;
+  }
+
+  .mobile{
+    margin-top: 10%;
+  }
+
+  .verticalLine {
+    display: none;
+  }
+
+  .wholePage {
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(162, 180, 239, 0.6) 100%, rgb(162, 180, 239) 100%);
+    position: fixed;
+    overflow: hidden;
+  }
+
+  .infoAboutProjekt {
+    margin-top: 10%;
+    width: 90%;
+    border-radius: 10px;
+    background-color: rgba(55, 227, 201, 0.22);
+    height: 20%;
+    align-items: center;
+    margin-top: 1vh;
+    justify-content: center;
+    display: flex;
+    margin-left: 5%;
+    text-align: center;
+    font-family: Metropolis;
+    font-size: 3vh;
+  }
+
+  .contact {
+    margin-top: 5%;
+    height: auto;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+  }
+
+  .leftContactBlock {
+    display: block;
+    width: 100vw;
+    text-align: center;
+    font-family: Metropolis;
+    align-items: center;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 1vh;
+    font-size: 4vh;
+    color: black;
+    font-family: Metropolis;
+  }
+
+  .rightContactBlock {
+    width: 100%;
+    display: block;
+  }
+
+  .contactUsButton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ContactUsMail {
+    margin-top: 1vh;
+    text-decoration: none;
+    width: 100%;
+    padding: 1vh;
+    font-size: 4vh;
+    background-color: #a3dfea;
+    border: 0;
+    color: #000000;
+    border-radius: 50px;
+    font-family: Metropolis;
+    box-shadow: 10px 5px 10px rgba(112, 162, 135, 0.2)
+  }
+
+  .images {
+    margin-top: 20%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: right;
+    height: 30%;
+  }
+
+  .logo {
+    margin: 1%;
+    height: 10vw;
+  }
+
 }

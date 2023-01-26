@@ -6,11 +6,11 @@
   <div class="uploadArea" *ngIf="!file && per=='' && res ==''" [@slideInRight]>
 
     <div class="uploadButton">
-      <button class="CheckIt desktop-version" type="file" (click)="hiddenfileinput.click()"  clickable> <h2>Upload Photo</h2> </button>
+      <button class="CheckIt " type="file" (click)="hiddenfileinput.click()"  clickable> <h2 class="uploadText">Upload Photo</h2> </button>
       <input style="display: none" type="file" (change)="getFile($event)"  #hiddenfileinput>
     </div>
 
-    <div class="dradAndDrop">
+    <div class="dradAndDrop desktop-version">
 
       <label for="files" class="dropText">Or drop it here
           <input id="files" type="file" class="file" (change)="getFile($event)"/>

@@ -1,82 +1,127 @@
-.whole{
-  margin-top: 2%;
-  width: 100%;
-  min-width: 100vw;
-  min-height: 100vh;
-  height: 100%;
-  display: flex;
-  background-image: url("src/assets/img/firstLine.svg");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 100%;}
+@media only screen and (min-width: 1001px) {
+  .whole {
+    margin-top: 2%;
+    width: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    background-image: url("src/assets/img/firstLine.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 
-.art{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5%;
+  .art {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+  }
+
+  .backButtonToAllArticles {
+    position: fixed;
+    text-align: center;
+    vertical-align: middle;
+    width: 4%;
+    height: 80%;
+    display: inline-block;
+    background-color: rgba(185, 177, 177, 0.17);
+    border-radius: 0 50px 50px 0;
+  }
+
+  .backText {
+    margin-top: 12vh;
+    margin-left: 5%;
+    font-size: 60pt;
+    font-family: "Metropolis Medium";
+    writing-mode: vertical-rl;
+    letter-spacing: 15vh;
+  }
+
+
+  .backButtonToAllArticles:hover {
+    background-color: rgba(89, 88, 88, 0.33);
+    transform: scaleX(1.1) scaleY(1.1);
+  }
+
+  .articleContent {
+    width: 80%;
+    margin-left: 7%;
+    margin-right: 3%;
+    display: inline-block;
+    white-space: normal;
+    font-size: 27pt;
+  }
+
+  .title {
+    margin-top: 2%;
+    font-family: "Metropolis Medium";
+    font-size: 70pt;
+    margin-bottom: 2%;
+  }
+
+  .bigImage {
+    width: 100%;
+  }
+
+  h2 {
+    margin-top: 3%;
+    font-family: "Metropolis Medium";
+    font-size: 40pt;
+    margin-bottom: 1%;
+  }
+
+  h3 {
+    font-family: "Metropolis Medium";
+    margin-top: 1%;
+    font-size: 30pt;
+  }
+
+  p {
+    font-family: "Metropolis Medium";
+  }
 }
+@media only screen and (max-width: 1000px) {
+  .backButtonToAllArticles {
+    display: none;
+  }
+  .art {
+    margin-top: 5%;
+    margin-left: 2%;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+  }
+  .title {
+    margin-top: 2%;
+    font-family: "Metropolis Medium";
+    font-size: 4vh;
+    margin-bottom: 2%;
+  }
+  .bigImage {
+    max-width: 100vw;
+  }
 
-.backButtonToAllArticles{
-  position: fixed;
-  text-align: center;
-  vertical-align: middle;
-  width: 4%;
-  height: 80%;
-  display: inline-block;
-  background-color: rgba(185, 177, 177, 0.17);
-  border-radius: 0 50px 50px 0;
-}
+  .fig{
+    max-width: 100vw;
+  }
 
-.backText{
-  margin-top: 12vh;
-  margin-left: 5%;
-  font-size: 60pt;
-  font-family: "Metropolis Medium";
-  writing-mode: vertical-rl;
-  letter-spacing: 15vh;
-}
+  h2 {
+    margin-top: 3%;
+    font-family: "Metropolis Medium";
+    font-size: 4vh;
+    margin-bottom: 1%;
+  }
 
+  h3 {
+    font-family: "Metropolis Medium";
+    margin-top: 1%;
+    font-size: 3vh;
+  }
 
-
-.backButtonToAllArticles:hover{
-  background-color: rgba(89, 88, 88, 0.33);
-  transform: scaleX(1.1) scaleY(1.1);
-}
-
-.articleContent{
-  width: 80%;
-  margin-left: 7%;
-  margin-right: 3%;
-  display: inline-block;
-  white-space: normal;
-  font-size: 27pt;
-}
-
-.title{
-  margin-top: 2%;
-  font-family: "Metropolis Medium";
-  font-size: 70pt;
-  margin-bottom: 2%;
-}
-
-.bigImage{
-  width: 100%;
-}
-
-h2{
-  margin-top: 3%;
-  font-family: "Metropolis Medium";
-  font-size: 40pt;
-  margin-bottom: 1%;
-}
-
-h3{
-  font-family: "Metropolis Medium";
-  margin-top: 1%;
-  font-size: 30pt;
-}
-
-p{
-  font-family: "Metropolis Medium";
+  p {
+    font-family: "Metropolis Medium";
+  }
 }
