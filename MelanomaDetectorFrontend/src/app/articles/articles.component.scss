@@ -37,25 +37,13 @@
     transform: scaleX(1.1) scaleY(1.1);
 
     .buttonToRead {
-      margin-top: 10%;
-      border-radius: 5px;
-      background-color: #722ED1;
-      width: 10vw;
-      height: 2vw;
-
-      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+      display: none;
     }
 
     .readMoreButton {
-      top: 35%;
-      font-size: 32pt;
-      color: white;
-      font-family: "Metropolis Medium";
+      display: none;
     }
 
-    .buttonToRead:hover {
-      transform: translateY(-3px);
-      transform: scaleX(1.1) scaleY(1.1);
-    }
+
   }
 }
