@@ -1,7 +1,6 @@
 .vscode
 .idea
 .builds
-backend/model/first
 backend/migrations/__pycache__/
 backend/migrations/versions/__pycache__/
 backend/app/__pycache__/
