@@ -4,7 +4,7 @@ from .config import Config
 from .swagger import init_swagger
 import logging
 from tensorflow.keras.models import load_model
-model = load_model('./model/first/future-2.hdf5')
+model = load_model('./model/first/future-feri-30-01-2023.hdf5')
 app = Flask(__name__)
 from .extensions import db
 from flask_migrate import Migrate
