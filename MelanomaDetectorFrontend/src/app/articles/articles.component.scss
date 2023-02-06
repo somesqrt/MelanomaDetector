@@ -1,27 +1,49 @@
-.card:hover{
-  background: rgb(222, 225, 246);
-  box-shadow: 0 15px 20px rgb(0 0 0 / 20%);
-  transform: translateY(-3px);
-  transform: scaleX(1.1) scaleY(1.1);
-  .buttonToRead{
-    margin-top: 10%;
-    border-radius: 5px;
-    background-color: #722ED1;
-    width: 10vw;
-    height: 2vw;
-
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .readMoreButton{
-    top:35%;
-    font-size: 32pt;
-    color: white;
-    font-family: "Metropolis Medium";
-  }
-
-  .buttonToRead:hover{
+@media only screen and (min-width: 1001px) {
+  .card:hover {
+    background: rgb(222, 225, 246);
+    box-shadow: 0 15px 20px rgb(0 0 0 / 20%);
     transform: translateY(-3px);
     transform: scaleX(1.1) scaleY(1.1);
+
+    .buttonToRead {
+      margin-top: 10%;
+      border-radius: 5px;
+      background-color: #722ED1;
+      width: 10vw;
+      height: 2vw;
+
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .readMoreButton {
+      top: 35%;
+      font-size: 32pt;
+      color: white;
+      font-family: "Metropolis Medium";
+    }
+
+    .buttonToRead:hover {
+      transform: translateY(-3px);
+      transform: scaleX(1.1) scaleY(1.1);
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .card:hover {
+    background: rgb(222, 225, 246);
+    box-shadow: 0 15px 20px rgb(0 0 0 / 20%);
+    transform: translateY(-3px);
+    transform: scaleX(1.1) scaleY(1.1);
+
+    .buttonToRead {
+      display: none;
+    }
+
+    .readMoreButton {
+      display: none;
+    }
+
+
   }
 }

@@ -6,7 +6,7 @@
         <div class="MainBoxMapPage" *ngIf="mapVisible" [@slideInRight]>
           <app-map>
           </app-map>
-          <button class="cancelMapButton desktop-version" (click)="changeMapVisible()"> Get back</button>
+          <button class="cancelMapButton " (click)="changeMapVisible()"> Get back</button>
         </div>
 
         <div class="MainBoxMainPage" *ngIf="manUnvisible" [@slideInLeft]>
@@ -16,10 +16,11 @@
             <div class="buttons">
               <button class="CheckIt desktop-version" type="file" (click)="goToScanPage()"  clickable> Go check it </button>
               <button class="Map desktop-version" (click)="changeMapVisible()"> Clinics map </button>
+              <button class="CheckIt mobile-version uploadButton" (click)="goToScanPage()"> Upload photo </button>
             </div>
           </div>
           <div class="third-button mobile-version">
-            <button class="Map mobile-version"> Clinics map </button>
+            <button class="Map mobile-version" (click)="changeMapVisible()"> Clinics map </button>
           </div>
           <div class="right ">
             <img src="assets/img/main-pic(png).png" class="img">
@@ -72,17 +73,14 @@
         <p class="experts-title">Our tool was developed with the recommendations of doctors in the field of cancer</p>
         <div class="people">
           <div class="person">
-            <img src="assets/icons/Profile.svg"class="person-foto">
-            <h2 class="person-name">Name Surname <br> Speciality</h2>
+            <img src="assets/img/doctor.png"class="person-foto">
+            <h2 class="person-name">MUDr. Zuzana Baranová, PhD. <br> Klinika dermatovenerológie UPJŠ LF a UNLP</h2>
           </div>
           <div class="person">
-            <img src="assets/icons/Profile.svg"class="person-foto">
-            <h2 class="person-name">Name Surname <br> Speciality</h2>
+            <img src="assets/img/doctor.png"class="person-foto">
+            <h2 class="person-name">MUDr. Janette Baloghová, PhD.<br> Klinika dermatovenerológie UPJŠ LF a UNLP</h2>
           </div>
-          <div class="person">
-            <img src="assets/icons/Profile.svg" class="person-foto">
-            <h2 class="person-name">Name Surname <br> Speciality</h2>
-          </div>
+
         </div>
         <hr class="line">
       </div>
